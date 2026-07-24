@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Your Booking History</h3>
+
+<table class="table">
+
+<tr>
+<th>Vehicle</th>
+<th>Slot</th>
+<th>Hours</th>
+<th>Amount</th>
+</tr>
+
+{% for b in bookings %}
+
+<tr>
+
+<td>{{b.vehicle}}</td>
+<td>{{b.slot_number}}</td>
+<td>{{b.hours}}</td>
+<td>₹{{b.amount}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

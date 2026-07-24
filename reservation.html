@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Slot Reservation</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<h2 class="text-center">Slot Reservation</h2>
+
+<div class="alert alert-info">
+Please complete your payment to reserve the slot
+</div>
+
+<div class="card p-4">
+
+<h5>Reservation Details</h5>
+
+<p><b>Vehicle Number:</b> {{data.vehicle}}</p>
+<p><b>Vehicle Type:</b> {{data.vehicle_type}}</p>
+<p><b>Slot Number:</b> {{data.slot}}</p>
+<p><b>Start Time:</b> {{data.start}}</p>
+<p><b>Duration:</b> {{data.hours}} hours</p>
+<p><b>End Time:</b> {{data.end}}</p>
+<p><b>Amount to Pay:</b> ₹{{data.amount}}</p>
+
+<a href="/confirm_payment" class="btn btn-success">Confirm and Pay</a>
+<a href="/user_dashboard" class="btn btn-danger">Cancel</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

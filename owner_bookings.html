@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Parking Booking Details</h3>
+
+<table class="table table-bordered table-striped mt-3">
+
+<tr>
+
+<th>User</th>
+<th>Vehicle</th>
+<th>Slot</th>
+<th>Hours</th>
+<th>Amount</th>
+
+</tr>
+
+{% for b in bookings %}
+
+<tr>
+
+<td>{{b.username}}</td>
+
+<td>{{b.vehicle}}</td>
+
+<td>{{b.slot_number}}</td>
+
+<td>{{b.hours}}</td>
+
+<td>₹{{b.amount}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

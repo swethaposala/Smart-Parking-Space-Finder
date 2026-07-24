@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Confirm Payment</h3>
+
+<div class="card p-3">
+
+Vehicle : {{data.vehicle}} <br>
+Slot : {{data.slot}} <br>
+Hours : {{data.hours}} <br>
+Amount : ₹{{data.amount}}
+
+<form method="POST">
+
+<button class="btn btn-success mt-3">
+Confirm Payment
+</button>
+
+</form>
+
+</div>
+
+{% endblock %}
